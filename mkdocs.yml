@@ -1,0 +1,41 @@
+site_name: PACKAGE_NAME
+site_description: Laravel-inspired jobs & scheduling for Python
+repo_url: https://github.com/EXAMPLE_ORG/package-name
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Quick start: quickstart.md
+  - Jobs: jobs.md
+  - Scheduling: scheduling.md
+  - Configuration: configuration.md
+  - Backends: backends.md
+  - Custom backends: custom-backends.md
+  - Security: security.md
+  - Compatibility: compatibility.md
+  - Releasing: releasing.md
+  - ADRs:
+      - Framework-independent core: adr/0001-framework-independent-core.md
+      - Adapters are plugins: adr/0002-adapters-are-plugins.md
+      - JSON default serializer: adr/0003-json-default-serializer.md
+      - Do not reimplement Celery: adr/0004-do-not-reimplement-celery.md
+      - Explicit capabilities: adr/0005-explicit-backend-capabilities.md
+      - src layout: adr/0006-src-layout.md
+      - Trusted Publishing: adr/0007-pypi-trusted-publishing.md

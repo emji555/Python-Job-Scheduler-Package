@@ -1,0 +1,35 @@
+name: Backend / plugin proposal
+description: Propose a new backend, scheduler, lock, or storage plugin
+labels: ["plugin"]
+body:
+  - type: input
+    id: plugin_name
+    attributes:
+      label: Proposed plugin name
+      placeholder: sqs / dramatiq / sqlalchemy-storage
+    validations:
+      required: true
+  - type: dropdown
+    id: group
+    attributes:
+      label: Entry-point group
+      options:
+        - package_name.backends
+        - package_name.schedulers
+        - package_name.locks
+        - package_name.storage
+        - package_name.serializers
+        - package_name.middleware
+    validations:
+      required: true
+  - type: textarea
+    id: capabilities
+    attributes:
+      label: Capabilities / semantics
+    validations:
+      required: true
+  - type: textarea
+    id: distribution
+    attributes:
+      label: Distribution plan
+      description: In-tree vs package-name-* third-party package?

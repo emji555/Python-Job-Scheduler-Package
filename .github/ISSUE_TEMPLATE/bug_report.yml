@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a defect in PACKAGE_NAME
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve PACKAGE_NAME.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      options: [eager, memory, celery, other]
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Initial Workloom release (`workloom`) with Laravel-inspired jobs API
 - Core job decorator, registry, envelope, JSON serializer, dispatch API, and job handles
 - Eager and Memory backends plus Celery adapter
 - Retry policies, middleware, lifecycle events, failed-job storage API

@@ -1,33 +1,34 @@
-# PACKAGE_NAME
+# Workloom
 
 Laravel-inspired **jobs, queues, scheduling, retries, locks, failed jobs, pipelines, and monitoring** for the Python ecosystem — without coupling your application to Django, FastAPI, Flask, Celery, or any single task engine.
 
-> Temporary names (rename before first PyPI release):
-> - Distribution: `package-name`
-> - Import: `package_name`
-> - CLI: `package-name`
-> - Env prefix: `PACKAGE_`
+| | |
+|---|---|
+| PyPI | `workloom` |
+| Import | `from workloom import job` |
+| CLI | `workloom` |
+| Env | `WORKLOOM_*` |
 
 ## Install
 
 ```bash
-pip install package-name
+pip install workloom
 ```
 
 Optional extras:
 
 ```bash
-pip install "package-name[celery]"
-pip install "package-name[redis]"
-pip install "package-name[django]"
-pip install "package-name[fastapi]"
-pip install "package-name[flask]"
+pip install "workloom[celery]"
+pip install "workloom[redis]"
+pip install "workloom[django]"
+pip install "workloom[fastapi]"
+pip install "workloom[flask]"
 ```
 
 ## Quick start
 
 ```python
-from package_name import job
+from workloom import job
 
 @job
 def send_email(user_id: int) -> None:
@@ -39,7 +40,7 @@ send_email.dispatch(10)
 ## Production-shaped example
 
 ```python
-from package_name import configure, job, schedule
+from workloom import configure, job, schedule
 
 configure(
     backend="celery",
@@ -64,20 +65,20 @@ EagerBackend | MemoryBackend | CeleryBackend | (community backends)
 
 ## Why this library exists
 
-Python teams often hard-wire Celery or Django-Q into domain code. `PACKAGE_NAME` gives you a stable Laravel-like API and a plugin architecture around proven engines — not a new broker.
+Python teams often hard-wire Celery or Django-Q into domain code. `Workloom` gives you a stable Laravel-like API and a plugin architecture around proven engines — not a new broker.
 
 See [docs/architecture.md](docs/architecture.md).
 
 ## CLI
 
 ```bash
-package-name doctor
-package-name worker
-package-name schedule run
-package-name schedule list
-package-name queues
-package-name jobs failed
-package-name jobs retry --all
+workloom doctor
+workloom worker
+workloom schedule run
+workloom schedule list
+workloom queues
+workloom jobs failed
+workloom jobs retry --all
 ```
 
 ## Documentation

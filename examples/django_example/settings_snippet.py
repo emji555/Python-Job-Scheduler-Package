@@ -6,17 +6,17 @@ This is documentation-as-code — not a full Django project.
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.auth",
-    "package_name.integrations.django",
+    "workloom.integrations.django",
 ]
 
-PACKAGE_BACKEND = "eager"
-PACKAGE_DEFAULT_QUEUE = "default"
-PACKAGE_TIMEZONE = "UTC"
+WORKLOOM_BACKEND = "eager"
+WORKLOOM_DEFAULT_QUEUE = "default"
+WORKLOOM_TIMEZONE = "UTC"
 
 # Example usage in a view / service:
 #
-# from package_name import job
-# from package_name.integrations.django.helpers import dispatch_after_commit
+# from workloom import job
+# from workloom.integrations.django.helpers import dispatch_after_commit
 #
 # @job(queue="dhis2", retries=5)
 # def sync_patient(patient_id: int) -> None:

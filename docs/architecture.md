@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-`PACKAGE_NAME` (`package_name`) provides a **Laravel-inspired** developer experience for jobs, queues, scheduling, retries, locks, failed jobs, pipelines, and monitoring — without coupling application code to Django, FastAPI, Flask, Celery, RQ, or any other framework/engine.
+`Workloom` (`workloom`) provides a **Laravel-inspired** developer experience for jobs, queues, scheduling, retries, locks, failed jobs, pipelines, and monitoring — without coupling application code to Django, FastAPI, Flask, Celery, RQ, or any other framework/engine.
 
 Central promise:
 
@@ -42,14 +42,14 @@ flowchart TB
 | Integrations | core + optional framework | each other |
 | CLI | core + plugins | frameworks |
 
-Importing `package_name` must succeed with **core dependencies only**.
+Importing `workloom` must succeed with **core dependencies only**.
 
 ## Application model
 
 Prefer explicit `App` instances. A process-local default app exists for convenience:
 
 ```python
-from package_name import App, configure, job
+from workloom import App, configure, job
 
 configure(backend="eager")
 
@@ -75,7 +75,7 @@ Backends advertise `BackendCapabilities`. Unsupported operations raise `Unsuppor
 Highest to lowest:
 
 1. Explicit arguments to `App(...)` / `configure(...)`
-2. Environment variables (`PACKAGE_*`)
+2. Environment variables (`WORKLOOM_*`)
 3. Built-in defaults
 
 Framework adapters may translate native settings into the generic config object.
@@ -93,11 +93,11 @@ See [SECURITY.md](../SECURITY.md) and [docs/security.md](security.md).
 
 Third-party packages register via `importlib.metadata` entry points:
 
-- `package_name.backends`
-- `package_name.schedulers`
-- `package_name.serializers`
-- `package_name.storage`
-- `package_name.locks`
-- `package_name.middleware`
+- `workloom.backends`
+- `workloom.schedulers`
+- `workloom.serializers`
+- `workloom.storage`
+- `workloom.locks`
+- `workloom.middleware`
 
 See [custom-backends.md](custom-backends.md).

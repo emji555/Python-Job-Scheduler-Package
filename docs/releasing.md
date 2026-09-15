@@ -2,10 +2,10 @@
 
 ## One-time setup
 
-1. Create the GitHub repository (example: `EXAMPLE_ORG/package-name`).
+1. Create the GitHub repository (example: `emji555/Python-Job-Scheduler-Package`).
 2. On **TestPyPI** → Your projects → Publishing → Trusted Publishers:
-   - Owner: `EXAMPLE_ORG`
-   - Repository: `package-name`
+   - Owner: `emji555`
+   - Repository: `Python-Job-Scheduler-Package`
    - Workflow: `publish.yml`
    - Environment: `testpypi`
 3. On **PyPI**, same settings with Environment: `pypi`.
@@ -25,7 +25,7 @@ development → PR → CI → merge main → bump version → tag v0.x.y
 # 1. Ensure main is green
 pytest && ruff check src tests && mypy && python -m build
 
-# 2. Bump version in pyproject.toml and src/package_name/__init__.py
+# 2. Bump version in pyproject.toml and src/workloom/__init__.py
 # 3. Update CHANGELOG.md
 
 git add -A

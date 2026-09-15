@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import pytest
 
-from package_name import job
-from package_name.app import App, set_current_app
-from package_name.core.result import JobStatus
-from package_name.exceptions import RetryExhaustedError, UnsupportedCapabilityError
+from workloom import job
+from workloom.app import App, set_current_app
+from workloom.core.result import JobStatus
+from workloom.exceptions import RetryExhaustedError, UnsupportedCapabilityError
 
 
 def test_eager_dispatch_returns_result(app: App) -> None:
@@ -57,7 +57,7 @@ def test_unsupported_delay_on_eager(app: App) -> None:
 
 
 def test_current_job_context(app: App) -> None:
-    from package_name import current_job
+    from workloom import current_job
 
     seen: dict[str, object] = {}
 

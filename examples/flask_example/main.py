@@ -2,8 +2,8 @@
 
 from flask import Flask, jsonify
 
-from package_name import job
-from package_name.integrations.flask import init_app
+from workloom import job
+from workloom.integrations.flask import init_app
 
 flask_app = Flask(__name__)
 package_app = init_app(flask_app, backend="eager")

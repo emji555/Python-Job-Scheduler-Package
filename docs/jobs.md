@@ -3,7 +3,7 @@
 ## Decorator
 
 ```python
-from package_name import job
+from workloom import job
 
 @job(queue="dhis2", retries=5, timeout=120, backoff="exponential")
 def sync_patient(patient_id: int) -> None:
@@ -33,7 +33,7 @@ handle.cancel()  # capability-dependent
 ## Context
 
 ```python
-from package_name import current_job
+from workloom import current_job
 
 @job
 def work() -> None:

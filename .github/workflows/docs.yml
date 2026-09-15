@@ -6,7 +6,7 @@ on:
     paths:
       - "docs/**"
       - "mkdocs.yml"
-      - "src/package_name/**"
+      - "src/workloom/**"
   workflow_dispatch:
 
 permissions:

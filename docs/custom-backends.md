@@ -1,14 +1,14 @@
 # Writing a custom backend
 
-This tutorial shows how to ship `package-name-mybackend` without modifying the main repository.
+This tutorial shows how to ship `workloom-mybackend` without modifying the main repository.
 
 ## 1. Implement the contract
 
 ```python
 # mybackend/backend.py
-from package_name.contracts.backend import BackendCapabilities
-from package_name.core.envelope import JobEnvelope
-from package_name.core.result import JobHandle, JobStatus
+from workloom.contracts.backend import BackendCapabilities
+from workloom.core.envelope import JobEnvelope
+from workloom.core.result import JobHandle, JobStatus
 
 class MyBackend:
     name = "mybackend"
@@ -45,18 +45,18 @@ class MyBackend:
 
 ```toml
 # pyproject.toml
-[project.entry-points."package_name.backends"]
+[project.entry-points."workloom.backends"]
 mybackend = "mybackend.backend:MyBackend"
 ```
 
 ## 3. Install and configure
 
 ```bash
-pip install package-name-mybackend
+pip install workloom-mybackend
 ```
 
 ```python
-from package_name import configure
+from workloom import configure
 configure(backend="mybackend")
 ```
 

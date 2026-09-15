@@ -14,5 +14,5 @@ Use Python packaging entry points (`importlib.metadata.entry_points`) for backen
 
 ## Consequences
 
-- `pip install package-name-sqs` can expose `backend="sqs"` without core changes.
+- `pip install workloom-sqs` can expose `backend="sqs"` without core changes.
 - Discovery happens at configuration time, not import time for optional heavy deps where practical.

@@ -5,9 +5,9 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from package_name import job, schedule
-from package_name.app import App
-from package_name.schedulers.core import ScheduleEntry
+from workloom import job, schedule
+from workloom.app import App
+from workloom.schedulers.core import ScheduleEntry
 
 
 def test_daily_at_cron_and_timezone(app: App) -> None:

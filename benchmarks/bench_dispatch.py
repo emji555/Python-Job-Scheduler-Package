@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import time
 
-from package_name import configure, job
+from workloom import configure, job
 
 
 def main() -> None:

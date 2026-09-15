@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from package_name import chain, group, job
-from package_name.app import App
+from workloom import chain, group, job
+from workloom.app import App
 
 
 def test_chain_sequential(app: App) -> None:

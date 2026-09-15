@@ -1,10 +1,10 @@
 name: Bug report
-description: Report a defect in PACKAGE_NAME
+description: Report a defect in Workloom
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: Thanks for helping improve PACKAGE_NAME.
+      value: Thanks for helping improve Workloom.
   - type: input
     id: version
     attributes:

@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import pytest
 
-from package_name.core.envelope import JobEnvelope
-from package_name.exceptions import SerializationError
-from package_name.serializers import JsonSerializer
+from workloom.core.envelope import JobEnvelope
+from workloom.exceptions import SerializationError
+from workloom.serializers import JsonSerializer
 
 
 def test_json_roundtrip() -> None:

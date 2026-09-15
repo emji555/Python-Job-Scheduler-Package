@@ -10,7 +10,7 @@ Building a new distributed broker is expensive, risky, and unnecessary when matu
 
 ## Decision
 
-`PACKAGE_NAME` is an abstraction layer. `CeleryBackend` delegates to Celery. Future backends wrap RQ, Dramatiq, SQS, etc. In-process `EagerBackend` / `MemoryBackend` cover tests and local development.
+`Workloom` is an abstraction layer. `CeleryBackend` delegates to Celery. Future backends wrap RQ, Dramatiq, SQS, etc. In-process `EagerBackend` / `MemoryBackend` cover tests and local development.
 
 ## Consequences
 

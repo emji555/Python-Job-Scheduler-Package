@@ -1,6 +1,6 @@
 """Data pipeline example using chain()."""
 
-from package_name import chain, configure, job
+from workloom import chain, configure, job
 
 configure(backend="eager")
 

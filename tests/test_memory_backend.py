@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from datetime import UTC, datetime, timedelta
 
-from package_name import job
-from package_name.app import App
-from package_name.core.result import JobStatus
+from workloom import job
+from workloom.app import App
+from workloom.core.result import JobStatus
 
 
 def test_memory_delayed_and_priority(memory_app: App) -> None:

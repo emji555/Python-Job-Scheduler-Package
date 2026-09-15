@@ -1,6 +1,6 @@
 """Plain Python quickstart example."""
 
-from package_name import configure, job
+from workloom import configure, job
 
 configure(backend="eager")
 

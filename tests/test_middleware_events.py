@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from package_name import job
-from package_name.app import App
-from package_name.core.events import JobDispatched, JobSucceeded
-from package_name.core.middleware import LoggingMiddleware
+from workloom import job
+from workloom.app import App
+from workloom.core.events import JobDispatched, JobSucceeded
+from workloom.core.middleware import LoggingMiddleware
 
 
 def test_middleware_and_events(app: App) -> None:

@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import pytest
 
-from package_name.app import App, set_current_app
-from package_name.core.jobs import job
-from package_name.core.result import JobStatus
+from workloom.app import App, set_current_app
+from workloom.core.jobs import job
+from workloom.core.result import JobStatus
 
 
 @pytest.fixture(params=["eager", "memory"])

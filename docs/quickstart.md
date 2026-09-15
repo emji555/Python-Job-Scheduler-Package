@@ -5,7 +5,7 @@ pip install -e ".[dev]"
 ```
 
 ```python
-from package_name import configure, job, schedule
+from workloom import configure, job, schedule
 
 configure(backend="eager", timezone="UTC")
 
@@ -21,6 +21,6 @@ schedule.job(hello).every_five_minutes()
 ## CLI
 
 ```bash
-package-name doctor
-package-name jobs failed
+workloom doctor
+workloom jobs failed
 ```

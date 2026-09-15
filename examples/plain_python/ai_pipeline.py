@@ -1,6 +1,6 @@
 """AI-style pipeline example (illustrative only)."""
 
-from package_name import chain, configure, job
+from workloom import chain, configure, job
 
 configure(backend="eager")
 

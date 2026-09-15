@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to `PACKAGE_NAME`.
+Thanks for contributing to `Workloom`.
 
 ## Development setup
 

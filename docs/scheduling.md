@@ -1,7 +1,7 @@
 # Scheduling
 
 ```python
-from package_name import schedule
+from workloom import schedule
 
 schedule.job(sync_data).every_five_minutes().without_overlapping()
 schedule.job(generate_report).daily_at("02:00").timezone("Africa/Cairo").on_one_server()

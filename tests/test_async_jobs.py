@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from package_name import job
-from package_name.app import App
+from workloom import job
+from workloom.app import App
 
 
 def test_async_job_on_eager(app: App) -> None:

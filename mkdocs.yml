@@ -1,6 +1,6 @@
-site_name: PACKAGE_NAME
+site_name: Workloom
 site_description: Laravel-inspired jobs & scheduling for Python
-repo_url: https://github.com/EXAMPLE_ORG/package-name
+repo_url: https://github.com/emji555/Python-Job-Scheduler-Package
 theme:
   name: material
   features:

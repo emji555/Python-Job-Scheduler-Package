@@ -3,14 +3,14 @@ requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "package-name"
+name = "workloom"
 version = "0.1.0"
 description = "Laravel-inspired jobs, queues, scheduling and monitoring for Python — framework and backend agnostic."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
-  { name = "PACKAGE_NAME Maintainers", email = "maintainers@example.com" },
+  { name = "Workloom Maintainers", email = "maintainers@example.com" },
 ]
 keywords = [
   "jobs",
@@ -65,39 +65,39 @@ docs = [
   "mkdocstrings[python]>=0.25",
 ]
 all = [
-  "package-name[redis,celery,django,fastapi,flask,otel]",
+  "workloom[redis,celery,django,fastapi,flask,otel]",
 ]
 
 [project.urls]
-Homepage = "https://github.com/EXAMPLE_ORG/package-name"
-Documentation = "https://EXAMPLE_ORG.github.io/package-name/"
-Repository = "https://github.com/EXAMPLE_ORG/package-name"
-Issues = "https://github.com/EXAMPLE_ORG/package-name/issues"
-Changelog = "https://github.com/EXAMPLE_ORG/package-name/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/emji555/Python-Job-Scheduler-Package"
+Documentation = "https://emji555.github.io/Python-Job-Scheduler-Package/"
+Repository = "https://github.com/emji555/Python-Job-Scheduler-Package"
+Issues = "https://github.com/emji555/Python-Job-Scheduler-Package/issues"
+Changelog = "https://github.com/emji555/Python-Job-Scheduler-Package/blob/main/CHANGELOG.md"
 
 [project.scripts]
-package-name = "package_name.cli.main:main"
+workloom = "workloom.cli.main:main"
 
-[project.entry-points."package_name.backends"]
-eager = "package_name.backends.eager:EagerBackend"
-memory = "package_name.backends.memory:MemoryBackend"
-celery = "package_name.backends.celery:CeleryBackend"
+[project.entry-points."workloom.backends"]
+eager = "workloom.backends.eager:EagerBackend"
+memory = "workloom.backends.memory:MemoryBackend"
+celery = "workloom.backends.celery:CeleryBackend"
 
-[project.entry-points."package_name.schedulers"]
-inprocess = "package_name.schedulers.inprocess:InProcessScheduler"
+[project.entry-points."workloom.schedulers"]
+inprocess = "workloom.schedulers.inprocess:InProcessScheduler"
 
-[project.entry-points."package_name.serializers"]
-json = "package_name.serializers.json:JsonSerializer"
+[project.entry-points."workloom.serializers"]
+json = "workloom.serializers.json:JsonSerializer"
 
-[project.entry-points."package_name.storage"]
-memory = "package_name.storage.memory:MemoryStorage"
+[project.entry-points."workloom.storage"]
+memory = "workloom.storage.memory:MemoryStorage"
 
-[project.entry-points."package_name.locks"]
-memory = "package_name.locks.memory:MemoryLockBackend"
-redis = "package_name.locks.redis:RedisLockBackend"
+[project.entry-points."workloom.locks"]
+memory = "workloom.locks.memory:MemoryLockBackend"
+redis = "workloom.locks.redis:RedisLockBackend"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/package_name"]
+packages = ["src/workloom"]
 
 [tool.hatch.build.targets.sdist]
 include = [
@@ -138,7 +138,7 @@ warn_return_any = true
 warn_unused_configs = true
 warn_unused_ignores = false
 mypy_path = "src"
-packages = ["package_name"]
+packages = ["workloom"]
 exclude = ["examples/", "benchmarks/", "integrations/"]
 
 [[tool.mypy.overrides]]
@@ -154,20 +154,20 @@ ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = [
-  "package_name.integrations.*",
-  "package_name.backends.celery",
-  "package_name.locks.redis",
-  "package_name.cli.*",
+  "workloom.integrations.*",
+  "workloom.backends.celery",
+  "workloom.locks.redis",
+  "workloom.cli.*",
 ]
 ignore_errors = true
 
 [[tool.mypy.overrides]]
-module = ["package_name.pipelines.*"]
+module = ["workloom.pipelines.*"]
 disable_error_code = ["no-any-return", "unused-ignore"]
 
 [tool.coverage.run]
 branch = true
-source = ["package_name"]
+source = ["workloom"]
 
 [tool.coverage.report]
 show_missing = true

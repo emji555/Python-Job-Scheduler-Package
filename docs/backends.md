@@ -16,7 +16,7 @@ Unsupported features raise `UnsupportedCapabilityError`.
 ## Celery
 
 ```bash
-pip install "package-name[celery]"
+pip install "workloom[celery]"
 ```
 
 ```python

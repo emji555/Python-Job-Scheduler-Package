@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from package_name.app import App, reset_default_app, set_current_app
+from workloom.app import App, reset_default_app, set_current_app
 
 
 @pytest.fixture(autouse=True)

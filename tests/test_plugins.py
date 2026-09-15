@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from package_name.plugins import GROUP_BACKENDS, list_plugins, load_plugin
+from workloom.plugins import GROUP_BACKENDS, list_plugins, load_plugin
 
 
 def test_builtin_backends_discoverable() -> None:

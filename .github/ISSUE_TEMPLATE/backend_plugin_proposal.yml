@@ -14,12 +14,12 @@ body:
     attributes:
       label: Entry-point group
       options:
-        - package_name.backends
-        - package_name.schedulers
-        - package_name.locks
-        - package_name.storage
-        - package_name.serializers
-        - package_name.middleware
+        - workloom.backends
+        - workloom.schedulers
+        - workloom.locks
+        - workloom.storage
+        - workloom.serializers
+        - workloom.middleware
     validations:
       required: true
   - type: textarea
@@ -32,4 +32,4 @@ body:
     id: distribution
     attributes:
       label: Distribution plan
-      description: In-tree vs package-name-* third-party package?
+      description: In-tree vs workloom-* third-party package?

@@ -2,11 +2,11 @@
 
 from fastapi import FastAPI
 
-from package_name import job
-from package_name.integrations.fastapi import create_app
+from workloom import job
+from workloom.integrations.fastapi import create_app
 
 package_app = create_app(backend="eager")
-api = FastAPI(title="PACKAGE_NAME FastAPI example")
+api = FastAPI(title="Workloom FastAPI example")
 
 
 @job

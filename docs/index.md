@@ -1,13 +1,13 @@
-# PACKAGE_NAME
+# Workloom
 
 Laravel-like jobs, queues, scheduling and monitoring for Python — framework and backend agnostic.
 
 ```bash
-pip install package-name
+pip install workloom
 ```
 
 ```python
-from package_name import job
+from workloom import job
 
 @job
 def send_email(user_id: int) -> None:

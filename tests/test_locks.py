@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from package_name.locks.memory import MemoryLockBackend
+from workloom.locks.memory import MemoryLockBackend
 
 
 def test_memory_lock_owner_protection() -> None:

@@ -45,7 +45,7 @@ dependencies = [
 redis = ["redis>=5.0"]
 celery = ["celery>=5.3", "redis>=5.0"]
 django = ["django>=4.2"]
-fastapi = ["fastapi>=0.110", "uvicorn>=0.27"]
+fastapi = ["fastapi>=0.141.1", "uvicorn>=0.27"]
 flask = ["flask>=3.0"]
 otel = ["opentelemetry-api>=1.24"]
 dev = [

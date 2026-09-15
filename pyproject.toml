@@ -42,8 +42,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-redis = ["redis>=5.0"]
-celery = ["celery>=5.3", "redis>=5.0"]
+redis = ["redis>=8.1.0"]
+celery = ["celery>=5.3", "redis>=8.1.0"]
 django = ["django>=4.2"]
 fastapi = ["fastapi>=0.110", "uvicorn>=0.27"]
 flask = ["flask>=3.0"]
